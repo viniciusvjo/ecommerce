@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views import View
@@ -94,7 +94,7 @@ class AdicionarAoCarrinho(View):
             }
 
         self.request.session.save()
-        pprint(carrinho)
+        # pprint(carrinho)
         messages.success(
             self.request,
             f'Produto {produto_nome} {variacao_nome} adicionado ao seu '
