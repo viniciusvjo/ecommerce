@@ -53,7 +53,6 @@ class Produto(models.Model):
             optimize=True,
             quality=50
         )
-        print('Imagem redimencionada')
 
     def save(self, *args, **kwargs):
         if not self.slug:
